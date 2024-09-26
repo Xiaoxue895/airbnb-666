@@ -260,7 +260,7 @@ router.get("/:spotId/reviews", async (req, res) => {
 
 
 // Get all Bookings for a Spot based on the Spot's id
-router.get("/:spotId/bookings", requireAuth, async (req, res) => {
+router.get("/:spotId/bookings", async (req, res) => {
   const spot = await Spot.findByPk(req.params.spotId);
   
   if (!spot) {
