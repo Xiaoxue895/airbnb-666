@@ -149,7 +149,7 @@ router.get("/", validateQuery,async (req, res) => {
       lng: Number(spot.lng),
       name: spot.name,
       description: spot.description,
-      price: spot.price,
+      price: Number(spot.price),
       createdAt: formatTime(spot.createdAt),
       updatedAt: formatTime(spot.updatedAt),
       avgRating: spot.dataValues.avgRating
