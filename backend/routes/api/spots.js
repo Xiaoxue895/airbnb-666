@@ -225,10 +225,10 @@ router.get("/current", requireAuth, async (req, res) => {
 router.get('/:spotId', async (req, res) => {
   // const { spotId } = req.params;
 
-  const spot1 = await Spot.findByPk(req.params.spotId);
-  if (!spot1) {
-    return res.status(404).json({ message: "Spot couldn't be found" });
-  }
+  // const spot1 = await Spot.findByPk(req.params.spotId);
+  // if (!spot1) {
+  //   return res.status(404).json({ message: "Spot couldn't be found" });
+  // }
 
     const spot = await Spot.findByPk(req.params.spotId, {
       attributes: {
@@ -250,20 +250,21 @@ router.get('/:spotId', async (req, res) => {
           as: 'Owner',
           attributes: ['id', 'firstName', 'lastName']
         }
-      ]
+      ],
+      group: ['Spot.id', 'Owner.id'] 
     });
 
-    // if (!spot1) {
-    //   return res.status(404).json({ message: "Spot couldn't be found" });
-    // }
+    if (!spot) {
+      return res.status(404).json({ message: "Spot couldn't be found" });
+    }
 
-    const reviews = await Review.findAndCountAll({
+    const reviewsCount = await Review.count({
       where: { spotId: spot.id },
       // attributes: [
       //   [Sequelize.fn('AVG', Sequelize.col('stars')), 'avgStarRating']
       // ]
     });
-    spot.dataValues.numReviews = reviews.count;
+    spot.dataValues.numReviews = reviewsCount;
 
     // const avgStarRating = parseFloat(reviews.rows[0].dataValues.avgStarRating).toFixed(1);
 
