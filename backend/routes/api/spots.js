@@ -176,7 +176,6 @@ router.get("/", validateQuery,async (req, res) => {
 router.get("/current", requireAuth, async (req, res) => {
     const { user } = req;
 
-    try {
       const spots = await Spot.findAll({
         where: { ownerId: user.id },
 
@@ -206,11 +205,11 @@ router.get("/current", requireAuth, async (req, res) => {
         city: spot.city,
         state: spot.state,
         country: spot.country,
-        lat: spot.lat,
-        lng: spot.lng,
+        lat: Number(spot.lat),
+        lng: Number(spot.lng),
         name: spot.name,
         description: spot.description,
-        price: spot.price,
+        price: Number(spot.price),
         createdAt: spot.createdAt,
         updatedAt: spot.updatedAt,
         avgRating: spot.dataValues.avgRating ? parseFloat(spot.dataValues.avgRating).toFixed(1) : "No rating yet.",
@@ -218,9 +217,6 @@ router.get("/current", requireAuth, async (req, res) => {
       }));
 
       return res.status(200).json({ Spots: spotDetails });
-    } catch (error) {
-      return res.status(500).json({ message: "error" });
-    }
   });
 
 
