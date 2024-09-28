@@ -209,7 +209,7 @@ router.get("/current", requireAuth, async (req, res) => {
         lng: Number(spot.lng),
         name: spot.name,
         description: spot.description,
-        price: Number(spot.price),
+        price: spot.price.toString(),
         createdAt: spot.createdAt,
         updatedAt: spot.updatedAt,
         avgRating: spot.dataValues.avgRating ? parseFloat(spot.dataValues.avgRating).toFixed(1) : "No rating yet.",
