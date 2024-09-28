@@ -180,7 +180,7 @@ router.get("/current", requireAuth, async (req, res) => {
         where: { ownerId: user.id },
         attributes: {
           include: [
-            [Sequelize.fn("AVG", Sequelize.col("stars")), "avgRating"],
+            [Sequelize.fn("AVG", Sequelize.col("Reviews.stars")), "avgRating"],
           ],
         },
         include: [
@@ -195,7 +195,7 @@ router.get("/current", requireAuth, async (req, res) => {
             required: false,
           },
         ],
-        group: ["Spot.id"],
+        group: ["Spot.id", "SpotImages.id"],
       });
 
       const spotDetails = spots.map((spot) => ({
