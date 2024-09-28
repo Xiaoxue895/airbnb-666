@@ -178,15 +178,15 @@ router.get("/current", requireAuth, async (req, res) => {
 
       const spots = await Spot.findAll({
         where: { ownerId: user.id },
-
+        attributes: {
+          include: [
+            [Sequelize.fn("AVG", Sequelize.col("stars")), "avgRating"],
+          ],
+        },
         include: [
           {
             model: Review,
-            attributes: {
-              include: [
-                [Sequelize.fn("AVG", Sequelize.col("stars")), "avgRating"],
-              ],
-            },
+            attributes: [],
           },
           {
             model: SpotImage,
