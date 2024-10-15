@@ -1,0 +1,36 @@
+.sign_up_form {
+    width: 400px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+}
+
+label {
+    display: block; 
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+}
+
+p {
+    color: red; 
+    font-size: 14px; 
+}
+
+button[type="submit"] {
+    width: 100%; 
+    padding: 10px; 
+    background-color: rgb(42, 151, 187); 
+    color: white; 
+    border: none; 
+    font-size: 16px; 
+}

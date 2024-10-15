@@ -1,0 +1,15 @@
+nav{
+    border-bottom: 1px solid lightblue;
+}
+
+.navul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+#logo a{
+    font-size: large;
+    font-weight: 500;
+}
