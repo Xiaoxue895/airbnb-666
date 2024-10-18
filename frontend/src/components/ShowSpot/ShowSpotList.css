@@ -1,0 +1,48 @@
+.spot_list_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.spot_container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.spot_container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spot_container a {
+    text-decoration: none;
+    color: #333;
+}
+
+.spot_container div {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.spot_tooltip {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+.spot_container:hover .spot_tooltip {
+    visibility: visible;
+}

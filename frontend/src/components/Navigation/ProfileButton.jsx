@@ -78,3 +78,6 @@ function ProfileButton({ user }) {
 }
 
 export default ProfileButton;
+
+
+//需要能创建spot和更新spot？从这里导航过去？

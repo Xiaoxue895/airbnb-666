@@ -6,8 +6,23 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 // import LoginFormPage from './components/LoginFormPage';
 // import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
-
 import * as sessionActions from './store/session';
+
+import SpotList from './components/ShowSpot/ShowSpotList';
+
+//差spot detail！！怪不得测试怪怪的
+
+import CreateSpot from './components/SpotFormModal/CreateSpot';
+import UpdateSpot from './components/SpotFormModal/UpdateSpot';
+
+
+
+
+
+
+
+
+// don't need change this part
 
 function Layout() {
   const dispatch = useDispatch();
@@ -15,6 +30,7 @@ function Layout() {
 
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => {
+      // console.log('user restored')
       setIsLoaded(true)
     });
   }, [dispatch]);
@@ -27,22 +43,32 @@ function Layout() {
   );
 }
 
+
+
+
+// need add some routes here
+
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       {
         path: '/',
-        element: <h1>Welcome!</h1>
+        element: <div><SpotList /></div>
       },
-      // {
-      //   path: '/login',
-      //   element: <LoginFormPage />
-      // },
-      // {
-      //   path: "/signup",
-      //   element: <SignupFormPage />
-      // }
+      {
+        path: '/spots/:spotId',
+        element: <div><SpotDetail /></div> //先放这里了
+      },
+      {
+        path: '/spots/new',
+        element: <div><CreateSpot /></div>
+      },
+      {
+        path: '/spots/:spotId/update',
+        element: <div><UpdateSpot /></div>
+      },
+
     ]
   }
 ]);

@@ -1,0 +1,1 @@
+// in the '/spots/:spotId' routes path
