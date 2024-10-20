@@ -1,3 +1,4 @@
+import "./DeleteModel.css"
 
 const DeleteModal =({onDelete, onClose,message,type}) =>{
 

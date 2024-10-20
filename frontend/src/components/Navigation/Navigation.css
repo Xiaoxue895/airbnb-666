@@ -1,15 +1,40 @@
-nav{
-    border-bottom: 1px solid lightblue;
-}
-
-.nav_ul{
+.profile-dropdown {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+  
+  .profile-wrapper {
+    position: relative;
+    width: 100px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  nav {
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .nav_ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-}
-
-#logo a{
+    list-style: none;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  
+  #logo a {
+    text-decoration: none;
+    color: #ff5a60;
     font-size: large;
     font-weight: 500;
-}
+  }
+  
+  .fa-airbnb {
+    font-size: large;
+  }

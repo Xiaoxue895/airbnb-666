@@ -4,7 +4,7 @@ import { useModal } from '../../context/Modal';
 import{ createReviews} from '../../store/review'
 import ReviewStarRating from '../ReviewStarRating/ReviewStarRating'
 
-//css.js
+import './ReviewFormModal.css'
 
 const ReviewFormModal =({spotId,onSubmitSuccess})=>{
 
@@ -39,9 +39,12 @@ const ReviewFormModal =({spotId,onSubmitSuccess})=>{
                     onChange={(e) => setReview(e.target.value)}
                 />
 
+
                 <div className='star_div'>
                     <span>Stars:</span>
-                    <span><ReviewStarRating rating={stars} setRating={setStars}/></span>
+                    <span className='stars_container'>
+                    <ReviewStarRating rating={stars} setRating={setStars} />
+                    </span>
                 </div>
 
                 <button type="submit " disabled ={review.length < 10 || stars === 0}>

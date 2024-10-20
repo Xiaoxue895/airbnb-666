@@ -1,0 +1,62 @@
+.profile-dropdown {
+    text-align: end;
+    background-color: white;
+    border: 1px solid  lightgray;
+    border-radius: 5px;
+    z-index: 1;
+    margin: 5px;
+    padding: 10px;
+
+    width: auto; 
+    min-width: 150px; 
+    white-space: nowrap;
+  }
+  
+  .profile-dropdown * {
+    background-color: white;
+    margin: 5px;
+  }
+
+
+.profile_button_wrapper{
+    margin-right: 100px;
+    width: fit-content;
+}
+
+.little_container{
+    display: flex;
+    text-align: end;
+    align-items: center;
+}
+
+.little_container button{
+    border: none;
+    padding: 0px;
+    color: black;
+    background-color: white;
+}
+
+.little_container button:hover{
+    cursor: pointer;
+}
+
+#create_spot_link{
+    margin-right: 10px;
+}
+
+#create_spot_link a{
+    text-decoration: none;
+    color: #ff5a60;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+.user_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+

@@ -44,13 +44,14 @@ function ProfileButton({ user }) {
     e.preventDefault();
     dispatch(sessionActions.logout());
     closeMenu();
+    navigate("/")
   };
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
 
   return (
-    <>
-      <div>
+    <div className='profile_button_wrapper'>
+      <div className='little_container'>
 
       {user && (
           <div id="create_spot_link">
@@ -68,7 +69,7 @@ function ProfileButton({ user }) {
         {user ? (
           <>
             <li>{user.username}</li>
-            <li>{user.firstName} {user.lastName}</li>
+            {/* <li>{user.firstName} {user.lastName}</li> */}
             <li>{user.email}</li>
             <li>
               <Link to={"/spots/current"}>Manage Spots</Link>
@@ -92,7 +93,7 @@ function ProfileButton({ user }) {
           </>
         )}
       </ul>
-    </>
+    </div>
   );
 }
 

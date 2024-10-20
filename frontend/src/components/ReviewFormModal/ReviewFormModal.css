@@ -1,0 +1,75 @@
+.review_form_modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+}
+
+.review_form_modal h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.review_form_modal textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    resize: none;
+    font-size: 16px;
+    color: #555;
+}
+
+.review_form_modal textarea:focus {
+    outline: none;
+    border-color: #ff5a60;
+}
+
+.star_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+.star_div span {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.stars_container {
+    display: flex; 
+    gap: 5px; 
+    flex-direction: row;
+  }
+
+.review_form_modal button {
+    background-color: #ff5a60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review_form_modal button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+.review_form_modal button:hover:enabled {
+    background-color: #e04b50;
+}

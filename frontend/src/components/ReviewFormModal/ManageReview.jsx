@@ -6,7 +6,7 @@ import { getUserReviews, deleteReviews } from "../../store/review";
 
 import DeleteModal from '../DeleteModel/DeleteModel'
 
-//css.js
+import './ManageReview.css'
 
 const ManageReview =()=>{
 

@@ -13,7 +13,7 @@ function Navigation({ isLoaded }) {
     <ul className='nav_ul'>
       
       <li id = 'logo'>
-        <NavLink to="/">AirbnbClone</NavLink>
+        <NavLink to="/"><i className="fa-brands fa-airbnb"></i>AirBnb</NavLink>
       </li>
 
       {isLoaded && (
