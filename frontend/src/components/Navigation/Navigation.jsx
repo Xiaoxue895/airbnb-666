@@ -10,10 +10,12 @@ function Navigation({ isLoaded }) {
 
   return (
     <nav>
-    <ul className='navul'>
+    <ul className='nav_ul'>
+      
       <li id = 'logo'>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/">AirbnbClone</NavLink>
       </li>
+
       {isLoaded && (
         <li>
           <ProfileButton user={sessionUser} />

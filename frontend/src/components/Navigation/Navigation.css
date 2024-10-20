@@ -2,7 +2,7 @@ nav{
     border-bottom: 1px solid lightblue;
 }
 
-.navul{
+.nav_ul{
     display: flex;
     justify-content: space-between;
     align-items: center;

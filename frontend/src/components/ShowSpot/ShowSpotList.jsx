@@ -26,9 +26,9 @@ const SpotList = () =>{
 
     return (
         <div className="spot_list_wrapper">
-        {spotsArray.map((spot) => (
+        {spotsArray.sort((a, b) => b.id - a.id).map((spot) => (
             <div
-            key={spot.id}
+            key={spot?.id}
             value ={toolTip}
             onMouseOut={()=>setToolTip(null)}
             onMouseOver={()=>setToolTip(spot.id)}
@@ -36,11 +36,21 @@ const SpotList = () =>{
         
             >
         
-            <Link key ={spot.id} to = {`/spots/${spot.id}`} />
+            <Link key ={spot.id} to = {`/spots/${spot?.id}`} >
             <img src={spot.preImage} alt={spot.name} />
-            <div>{spot.city},{spot.state},${spot.price}</div>
+            <div>{spot.city},{spot.state}</div>
 
-           </div>
+            <div className="spot_list_desc">
+                <div className="spot_list_preview">
+                <div>{spot.city}, {spot.state}</div>
+                <div>⭐️ {spot.avgRating && spot.avgRating !== "No rating yet." ? spot.avgRating : "New"}</div>
+            </div>
+            <span className='spot_list_preview_price'>${spot.price}</span><span> night</span>
+            </div>
+
+            {toolTip === spot.id ? <h4>{spot.name}</h4> : <h3 className="no_show">？？？</h3>}
+            </Link>
+            </div>
 
         ))}
         </div>
@@ -51,5 +61,3 @@ const SpotList = () =>{
 
 export default SpotList;
 
-//需要注意，目前还没处理图片的逻辑，需要再考虑下
-//周四中午测试，无错误，能在浏览器终端展示，但没有css所以页面没有内容

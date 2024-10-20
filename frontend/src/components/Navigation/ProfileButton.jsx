@@ -8,11 +8,16 @@ import SignupFormModal from '../SignupFormModal';
 
 import "./ProfileButton.css"
 
+import { useNavigate,Link } from 'react-router-dom';
+
+
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   const ulRef = useRef();
+
+  const navigate = useNavigate();
 
   const toggleMenu = (e) => {
     e.stopPropagation(); // Keep from bubbling up to document and triggering closeMenu
@@ -45,15 +50,29 @@ function ProfileButton({ user }) {
 
   return (
     <>
+      <div>
+
+      {user && (
+          <div id="create_spot_link">
+            <Link to={"/spots/new"}>Create a New Spot</Link>
+          </div>
+      )}
+
       <button className = "user_icon" onClick={toggleMenu}>
         <FaUserCircle />
       </button>
+
+      </div>
+
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
             <li>{user.username}</li>
             <li>{user.firstName} {user.lastName}</li>
             <li>{user.email}</li>
+            <li>
+              <Link to={"/spots/current"}>Manage Spots</Link>
+            </li>
             <li>
               <button onClick={logout}>Log Out</button>
             </li>
@@ -78,6 +97,3 @@ function ProfileButton({ user }) {
 }
 
 export default ProfileButton;
-
-
-//需要能创建spot和更新spot？从这里导航过去？

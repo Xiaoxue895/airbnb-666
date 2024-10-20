@@ -63,6 +63,7 @@ export const showSpotLists = () => async (dispatch) => {
     const response = await csrfFetch(`/api/spots/${spotId}`);
     if (response.ok) {
       const spot = await response.json();
+
       dispatch(showSpotDetail(spot));
       return spot;
     } else {
@@ -70,6 +71,21 @@ export const showSpotLists = () => async (dispatch) => {
       return error;
     }
   };
+
+  // show current spot
+
+  export const showCurrentSpots = () => async (dispatch) => {
+    const response = await csrfFetch("/api/spots/current");
+    if (response.ok) {
+      const spots = await response.json();
+      dispatch(showSpotList(spots.Spots));
+      return spots.Spots;
+    } else {
+      const error = await response.json();
+      return error;
+    }
+  };
+
 
   export const createSpots = (spot) => async (dispatch) => {
     const response = await csrfFetch("/api/spots", {

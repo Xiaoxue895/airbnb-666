@@ -9,16 +9,13 @@ import Navigation from './components/Navigation';
 import * as sessionActions from './store/session';
 
 import SpotList from './components/ShowSpot/ShowSpotList';
+import SpotDetail from './components/ShowSpot/ShowSpotDetail';
 
-//差spot detail！！怪不得测试怪怪的
-
+import ManageSpot from './components/SpotFormModal/ManageSpot';
 import CreateSpot from './components/SpotFormModal/CreateSpot';
 import UpdateSpot from './components/SpotFormModal/UpdateSpot';
 
-
-
-
-
+import ManageReview from './components/ReviewFormModal/ManageReview'
 
 
 
@@ -58,7 +55,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/spots/:spotId',
-        element: <div><SpotDetail /></div> //先放这里了
+        element: <div><SpotDetail /></div> 
+      },
+      {
+        path: '/spots/current',
+        element: <div><ManageSpot /></div>
       },
       {
         path: '/spots/new',
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
         path: '/spots/:spotId/update',
         element: <div><UpdateSpot /></div>
       },
+      {
+        path: '/reviews/current',
+        element: <div><ManageReview /></div>
+      }
 
     ]
   }

@@ -20,7 +20,12 @@ const SpotImage = ({spotId}) => {
     return(
         <div className="all_spot_container">
             <div className="big_image">
-            <img src={previewImage[0].url} alt={spot.name} />
+
+            {previewImage.length > 0 ? (
+                <img src={previewImage[0].url} alt={spot.name} />
+            ) : (
+                <div>No preview image available</div> 
+            )}
             </div>
 
             {smallImages.map((image) => (
