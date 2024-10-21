@@ -9,7 +9,7 @@ import { useModal } from "../../context/Modal";
 
 import DeleteModal from '../DeleteModel/DeleteModel'
 
-//css.js
+import './ManageSpot.css'
 
 const ManageSpot = ()=>{
     const { setModalContent, closeModal } = useModal();
@@ -51,7 +51,8 @@ const ManageSpot = ()=>{
     return(
         <div className="all_spot_container">
             <h1>Manage Spots</h1>
-            <button><Link to ={'/spots/new'}>Create a New Spot</Link></button>
+            <button><Link to ={'/spots/new'} className="create_spot_button">
+            Create a New Spot</Link></button>
 
 
             <div className="user_spot_container">

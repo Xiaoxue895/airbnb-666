@@ -1,0 +1,62 @@
+.review_list_container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.review_list_container h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.reviewList_small_container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reviewList_small_container h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.reviewList_small_container p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.post_review_button,
+.delete_review_button {
+    background-color: #ff385c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post_review_button:hover,
+.delete_review_button:hover {
+    background-color: #ff385c;
+}
+
+.review_list_container h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.review_list_container .star_rating {
+    font-size: 18px;
+    color: #ffcc00; 
+}

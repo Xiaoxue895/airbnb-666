@@ -5,6 +5,7 @@ const SHOW_SPOT_DETAIL = "spot/SHOW_SPOT_DETAIL"
 
 const CREATE_SPOT = "spot/CREATE_SPOT"
 const DELETE_SPOT = "spot/DELETE_SPOT"
+// const UPDATE_SPOT = "spot/UPDATE_SPOT"
 
 const ADD_IMAGE ="image/ADD_IMAGE"
 //开始处理图片
@@ -30,6 +31,14 @@ const createSpot = (spot) =>{
         spot
     }
 }
+
+// const updateSpot =(spot) =>{
+//     return{
+//         type:UPDATE_SPOT,
+//         spot
+//     }
+
+// }
 
 const deleteSpot = (spotId) =>{
     return{
@@ -181,6 +190,18 @@ export const showSpotLists = () => async (dispatch) => {
             newState[action.spot.id] = action.spot;
             return newState;
         }
+        // case UPDATE_SPOT:{
+        //     const newState = { ...state };
+        //     const updatedSpot = action.spot;
+    
+        //     newState[updatedSpot.id] = { 
+        //       ...newState[updatedSpot.id], 
+        //       ...updatedSpot 
+        //     };
+      
+        //     return newState;
+
+        // }
         case DELETE_SPOT: {
             const newState = { ...state };
             delete newState[action.spotId];

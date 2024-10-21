@@ -22,10 +22,10 @@ const ManageReview =()=>{
 
     if (!reviews) return null;
 
-    const handleDeleteClick = () => {
+    const handleDeleteClick = (reviewId) => {
         setModalContent(
           <DeleteModal
-            onDelete={() => handleDeleteConfirm()}
+            onDelete={() => handleDeleteConfirm(reviewId)}
             onClose={closeModal}
             message="Are you sure you want to remove this review?"
             type="Review"

@@ -1,13 +1,23 @@
-
 .spot_list_wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+    .spot_list_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .spot_list_wrapper {
+        grid-template-columns: 1fr;
+    }
+}
 
 .spot_container {
     border: 1px solid #e1e1e1;
@@ -18,10 +28,9 @@
 }
 
 .spot_container:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
-
 
 .spot_container img {
     width: 100%;
@@ -46,7 +55,6 @@
     font-size: 1.2rem;
     color: #ff385c;
 }
-
 
 .no_show {
     visibility: hidden;

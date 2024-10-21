@@ -12,6 +12,7 @@ const UpdateSpot = () =>{
 
     const dispatch = useDispatch();
 
+
     useEffect(() => {
         dispatch(showSpotDetails(spotId))
     }, [dispatch, spotId])
@@ -19,6 +20,7 @@ const UpdateSpot = () =>{
     const spot = useSelector(state =>state.spots[spotId]);
 
     if (!spot) return null;
+
 
     return (
         Object.keys(spot).length > 1 && (

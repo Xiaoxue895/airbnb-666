@@ -7,7 +7,7 @@ import { useModal } from '../../context/Modal';
 import DeleteModal from "../DeleteModel/DeleteModel";
 import ReviewFormModal from "../ReviewFormModal/ReviewFormModal";
 
-//css.js
+import './ShowReviewList.css'
 
 const ReviewList = ({spotId})=>{
     const dispatch = useDispatch();

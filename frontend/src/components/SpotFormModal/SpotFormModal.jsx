@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
-import {createSpots,updateSpots,addImages} from '../../store/spot';
+import {createSpots,addImages,updateSpots} from '../../store/spot';
 //css.js
 
 const SpotForm = ({spot,formType}) =>{
@@ -81,24 +81,22 @@ const SpotForm = ({spot,formType}) =>{
 
         const spotData ={...spot,address,city,state,country,lat,lng,name,description,price};
 
+
         let newSpot;
-        if(formType ==="createSpot"){
-            newSpot = await dispatch(createSpots(spotData));
-
-            const imageArray = [
-                { spotId: newSpot.id, preview: true, url: previewImage },
-                image2 && { spotId: newSpot.id, preview: false, url: image2 },
-                image3 && { spotId: newSpot.id, preview: false, url: image3 },
-                image4 && { spotId: newSpot.id, preview: false, url: image4 },
-                image5 && { spotId: newSpot.id, preview: false, url: image5 },
-              ].filter(Boolean); 
-
+        if (formType === "updateSpot") {
+          newSpot = await dispatch(updateSpots(spotData));
+        } else if (formType === "reateSpot") {
+          newSpot = await dispatch(createSpots(spotData));
+          const imageArray = [
+            { spotId: newSpot.id, preview: true, url: previewImage },
+            { spotId: newSpot.id, preview: false, url: image2 },
+            { spotId: newSpot.id, preview: false, url: image3 },
+            { spotId: newSpot.id, preview: false, url: image4 },
+            { spotId: newSpot.id, preview: false, url: image5 },
+          ];
           await Promise.all(imageArray.map((image) => dispatch(addImages(image))));
         }
-        
-        if(formType === "updateSpot"){
-            newSpot = await dispatch(updateSpots(spotData));
-        }
+
 
 
         if (newSpot.errors) {

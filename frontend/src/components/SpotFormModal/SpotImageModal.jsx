@@ -1,11 +1,14 @@
 import { useState,useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showSpotDetails } from "../../store/spot";
-// css.js
+
+import './SpotImageModal.css'
 
 const SpotImage = ({spotId}) => {
     const dispatch = useDispatch();
     const spot = useSelector((state) => state.spots[spotId]);
+
+    console.log("Spot Images:", spot?.SpotImages);
 
     useEffect(() => {
         dispatch(showSpotDetails(spotId));
@@ -24,7 +27,7 @@ const SpotImage = ({spotId}) => {
             {previewImage.length > 0 ? (
                 <img src={previewImage[0].url} alt={spot.name} />
             ) : (
-                <div>No preview image available</div> 
+                <div><img src ="/images/house-540796_1280.jpg"></img></div> 
             )}
             </div>
 
