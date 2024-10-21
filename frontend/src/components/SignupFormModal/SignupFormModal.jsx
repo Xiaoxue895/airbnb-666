@@ -50,6 +50,8 @@ function SignupFormModal() {
     });
   };
 
+  const isFormIncomplete = !email || !username || !firstName || !lastName || !password || !confirmPassword;
+
   return (
     <>
       <h1>Sign Up</h1>
@@ -118,9 +120,9 @@ function SignupFormModal() {
         {errors.confirmPassword && (
           <p>{errors.confirmPassword}</p>
         )}
-        <button type="submit"
-        disabled={Object.values(errors).length > 0}
-        >Sign Up</button>
+        <button type="submit" disabled={isFormIncomplete || Object.values(errors).length > 0}>
+          Sign Up
+        </button>
       </form>
     </>
   );

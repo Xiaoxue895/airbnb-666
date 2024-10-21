@@ -1,5 +1,5 @@
 .spot_detail_continer {
-    max-width: 800px;
+    width: 100%;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #e0e0e0;
@@ -20,10 +20,12 @@
     margin-bottom: 20px;
 }
 
+
 .spot_image {
-    width: 100%;
-    height: auto;
+    max-width: 100%; 
+    height: auto; 
     border-radius: 8px;
+    object-fit: cover; 
 }
 
 .spot_detail_description {

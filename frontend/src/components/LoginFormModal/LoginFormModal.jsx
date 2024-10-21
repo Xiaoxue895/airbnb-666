@@ -82,7 +82,7 @@ function LoginFormModal() {
 
         <button type="submit" disabled={Object.values(errors).length}>Log In</button>
 
-        <button onClick={handleDemoLogin}>Login a Demo User</button>
+        <button onClick={handleDemoLogin}>Log in as Demo User</button>
 
       </form>
     </>

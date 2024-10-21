@@ -1,19 +1,47 @@
-.all_spot_container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-
-}
-.all_spot_container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.big_image{
-    grid-column: span 2;
-    grid-row: span 2;
-
-}
+.spot_form {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  
+  .spot_form form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 30px auto;
+    width: 50vw;
+  }
+  
+  .spot_form label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .spot_form input {
+    width: 50vw;
+  }
+  
+  .spot_form textarea {
+    width: 50vw;
+  }
+  
+  .spot_form h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .spot_form button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #ff385c;
+    margin: 50px auto;
+  }
+  
+  .current_spotlist_container button a {
+    text-decoration: none;
+    color: white;
+  }

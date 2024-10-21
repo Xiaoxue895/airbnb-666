@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showSpotDetails } from "../../store/spot";
 
-import './SpotImageModal.css'
+// import './SpotImageModal.css'
 
 const SpotImage = ({spotId}) => {
     const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const SpotImage = ({spotId}) => {
             {previewImage.length > 0 ? (
                 <img src={previewImage[0].url} alt={spot.name} />
             ) : (
-                <div><img src ="/images/house-540796_1280.jpg"></img></div> 
+                <div><img src ="/images/house-540796_1280.jpg" className="spot_image"></img></div> 
             )}
             </div>
 
