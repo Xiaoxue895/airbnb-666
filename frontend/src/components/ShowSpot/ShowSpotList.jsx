@@ -39,9 +39,9 @@ const SpotList = () =>{
             <Link key ={spot.id} to = {`/spots/${spot?.id}`} >
             {/* <img src={spot.preImage} alt={spot.name} */}
 
-            <img src ='images/WeChatee787054df89daea6e1a58875fb57021.jpg' alt={spot.name}// test
+            <img src ={spot.preImage} alt={spot.name}// test
 
-            onError={(e) => { e.target.onerror = null; e.target.src = '/images/house-1867187_1280.jpg'; }} 
+            onError={(e) => { e.target.onerror = null; e.target.src = 'images/WeChatee787054df89daea6e1a58875fb57021.jpg'; }} 
             />
             {/* <div>{spot.city},{spot.state}</div> */}
 
