@@ -31,7 +31,7 @@ const SpotImage = ({spotId}) => {
                <img src={previewImage.url} alt={spot.name} />
             ) : (
                <img
-               src="https://ibb.co/30tgXSD"
+               src="images/WeChatee787054df89daea6e1a58875fb57021.jpg"
                alt="default preview"
                />
             )}
