@@ -25,7 +25,7 @@ const SpotImage = ({spotId}) => {
             <div className="big_image">
 
             {previewImage.length > 0 ? (
-                <img src={previewImage[0].url} alt={spot.name} />
+                <img src={previewImage.url} alt={spot.name} /> //previewImage[0].url
             ) : (
                 <div><img src ="/images/house-540796_1280.jpg" className="spot_image"></img></div> 
             )}
