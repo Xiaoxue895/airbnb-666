@@ -52,6 +52,7 @@ const SpotDetail = ()=>{
     <div className="spot_detail_continer">
         <h2 className="spot_title">{spot.name}</h2>
         <p className="spot_location">{spot.city}, {spot.state}, {spot.country}</p>
+        
         <SpotImage spotId={spotId} className="spot_image"/>
 
         <div>
