@@ -11,17 +11,17 @@ if (process.env.NODE_ENV === 'production') {
 const SpotImages = [
   {
     spotId: 1,
-    url: "https://pixabay.com/zh/photos/mountain-volcano-peak-summit-477832/",
+    url: "https://ibb.co/V98P8kp",
     preview: true
   },
   {
     spotId: 2,
-    url: "https://pixabay.com/zh/photos/mountains-sunlight-alps-nature-6753786/",
-    preview: false
+    url: "https://ibb.co/vmZ2k9H",
+    preview: true
   },
   {
     spotId: 3,
-    url: "https://pixabay.com/zh/photos/lake-forest-trees-woods-water-4591082/",
+    url: "https://ibb.co/C2W33Cp",
     preview: true
   }
 ];
