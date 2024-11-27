@@ -11,13 +11,38 @@ if (process.env.NODE_ENV === 'production') {
 
 const reviewImageData = [
   {
-    reviewId: 4,
-    url: "https://images.app.goo.gl/jYJGSQZfJMUGwsVH9"
+    reviewId: 1,
+    url: "frontend/public/images/r-1.jpg"
   },
   {
     reviewId: 2,
-    url: "https://images.app.goo.gl/4pMTvNj9YoVVFFbV6"
-  }
+    url: "frontend/public/images/r-2.jpg"
+  },
+  {
+    reviewId: 3,
+    url: "frontend/public/images/r-3.jpg"
+  },
+  {
+    reviewId: 4,
+    url: "frontend/public/images/r-4.jpg"
+  },
+  {
+    reviewId: 5,
+    url: "frontend/public/images/r-5.jpg"
+  },
+  {
+    reviewId: 6,
+    url: "frontend/public/images/r-6.jpg"
+  },
+  {
+    reviewId: 7,
+    url: "frontend/public/images/r-7.jpg"
+  },
+  {
+    reviewId: 8,
+    url: "frontend/public/images/r-8.jpg"
+  },
+
 ]
 
 module.exports = {
