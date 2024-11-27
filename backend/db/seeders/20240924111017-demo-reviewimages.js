@@ -12,35 +12,35 @@ if (process.env.NODE_ENV === 'production') {
 const reviewImageData = [
   {
     reviewId: 1,
-    url: "frontend/public/images/r-1.jpg"
+    url: "/images/r-1.jpg"
   },
   {
     reviewId: 2,
-    url: "frontend/public/images/r-2.jpg"
+    url: "/images/r-2.jpg"
   },
   {
     reviewId: 3,
-    url: "frontend/public/images/r-3.jpg"
+    url: "/images/r-3.jpg"
   },
   {
     reviewId: 4,
-    url: "frontend/public/images/r-4.jpg"
+    url: "/images/r-4.jpg"
   },
   {
     reviewId: 5,
-    url: "frontend/public/images/r-5.jpg"
+    url: "/images/r-5.jpg"
   },
   {
     reviewId: 6,
-    url: "frontend/public/images/r-6.jpg"
+    url: "/images/r-6.jpg"
   },
   {
     reviewId: 7,
-    url: "frontend/public/images/r-7.jpg"
+    url: "/images/r-7.jpg"
   },
   {
     reviewId: 8,
-    url: "frontend/public/images/r-8.jpg"
+    url: "/images/r-8.jpg"
   },
 
 ]
