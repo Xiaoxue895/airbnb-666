@@ -49,7 +49,7 @@ const spotData = [
     price: 1200,
   },
   {
-    ownerId: 4,
+    ownerId: 1,
     address: "678 Alpine Trail",
     city: "Aspen",
     state: "Colorado",
@@ -62,7 +62,7 @@ const spotData = [
     price: 1000,
   },
   {
-    ownerId: 5,
+    ownerId: 2,
     address: "345 Desert Oasis Road",
     city: "Sedona",
     state: "Arizona",
@@ -75,7 +75,7 @@ const spotData = [
     price: 400,
   },
   {
-    ownerId: 6,
+    ownerId: 3,
     address: "123 Canyon Creek Lane",
     city: "Boulder",
     state: "Colorado",
@@ -87,7 +87,7 @@ const spotData = [
     price: 350,
   },
   {
-    ownerId: 7,
+    ownerId: 1,
     address: "789 Ocean Breeze Drive",
     city: "Malibu",
     state: "California",
@@ -99,7 +99,7 @@ const spotData = [
     price: 800,
   },
   {
-    ownerId: 8,
+    ownerId: 2,
     address: "456 Pinewood Avenue",
     city: "Asheville",
     state: "North Carolina",
@@ -111,7 +111,7 @@ const spotData = [
     price: 250,
   },
   {
-    ownerId: 9,
+    ownerId: 3,
     address: "987 Sunflower Court",
     city: "Austin",
     state: "Texas",
@@ -123,7 +123,7 @@ const spotData = [
     price: 300,
   },
   {
-    ownerId: 10,
+    ownerId: 1,
     address: "321 Vineyard Road",
     city: "Napa",
     state: "California",
@@ -135,7 +135,7 @@ const spotData = [
     price: 600,
   },
   {
-    ownerId: 11,
+    ownerId: 2,
     address: "654 Forest Hollow Drive",
     city: "Lake Placid",
     state: "New York",
@@ -147,7 +147,7 @@ const spotData = [
     price: 400,
   },
   {
-    ownerId: 12,
+    ownerId: 3,
     address: "111 Desert Bloom Lane",
     city: "Palm Springs",
     state: "California",
@@ -159,7 +159,7 @@ const spotData = [
     price: 500,
   },
   {
-    ownerId: 13,
+    ownerId: 3,
     address: "789 Glacier Peak Drive",
     city: "Anchorage",
     state: "Alaska",
@@ -171,7 +171,7 @@ const spotData = [
     price: 450,
   },
   {
-    ownerId: 14,
+    ownerId: 3,
     address: "222 Maplewood Drive",
     city: "Stowe",
     state: "Vermont",
@@ -183,7 +183,7 @@ const spotData = [
     price: 350,
   },
   {
-    ownerId: 15,
+    ownerId: 3,
     address: "555 Cliffside Avenue",
     city: "Moab",
     state: "Utah",
@@ -195,7 +195,7 @@ const spotData = [
     price: 300,
   },
   {
-    ownerId: 16,
+    ownerId: 3,
     address: "777 Harbor View Road",
     city: "Key West",
     state: "Florida",
@@ -207,7 +207,7 @@ const spotData = [
     price: 700,
   },
   {
-    ownerId: 17,
+    ownerId: 3,
     address: "101 Prairie Road",
     city: "Jackson",
     state: "Wyoming",
@@ -219,7 +219,7 @@ const spotData = [
     price: 500,
   },
   {
-    ownerId: 18,
+    ownerId: 3,
     address: "333 Summit Drive",
     city: "Lake Tahoe",
     state: "California",
@@ -231,7 +231,7 @@ const spotData = [
     price: 600,
   },
   {
-    ownerId: 19,
+    ownerId: 3,
     address: "888 Bayfront Lane",
     city: "Bar Harbor",
     state: "Maine",
@@ -243,7 +243,7 @@ const spotData = [
     price: 250,
   },
   {
-    ownerId: 20,
+    ownerId: 3,
     address: "444 Sunset Boulevard",
     city: "Santa Monica",
     state: "California",
@@ -255,7 +255,7 @@ const spotData = [
     price: 750,
   },
   {
-    ownerId: 21,
+    ownerId: 3,
     address: "555 Riverbend Way",
     city: "Bozeman",
     state: "Montana",
@@ -267,7 +267,7 @@ const spotData = [
     price: 400,
   },
   {
-    ownerId: 22,
+    ownerId: 3,
     address: "999 Desert Mirage Lane",
     city: "Tucson",
     state: "Arizona",
@@ -279,7 +279,7 @@ const spotData = [
     price: 350,
   },
   {
-    ownerId: 23,
+    ownerId: 3,
     address: "121 Island View Road",
     city: "Maui",
     state: "Hawaii",
@@ -291,7 +291,7 @@ const spotData = [
     price: 900,
   },
   {
-    ownerId: 24,
+    ownerId: 34,
     address: "222 Ridgeway Trail",
     city: "Flagstaff",
     state: "Arizona",
@@ -303,7 +303,7 @@ const spotData = [
     price: 350,
   },
   {
-    ownerId: 25,
+    ownerId: 3,
     address: "777 Blossom Lane",
     city: "Charleston",
     state: "South Carolina",
