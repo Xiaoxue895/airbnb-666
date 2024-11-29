@@ -1,47 +1,42 @@
-.spot_form {
-    max-width: 1200px;
-    margin: 0px auto;
-  }
-  
-  .spot_form form {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 30px auto;
-    width: 50vw;
-  }
-  
-  .spot_form label {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  
-  .spot_form input {
-    width: 50vw;
-  }
-  
-  .spot_form textarea {
-    width: 50vw;
-  }
-  
-  .spot_form h2 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-  }
-  
-  .spot_form button {
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    background-color: #ff385c;
-    margin: 50px auto;
-  }
-  
-  .current_spotlist_container button a {
-    text-decoration: none;
-    color: white;
-  }
+.all_spot_container {
+  display: grid;
+  grid-template-areas: 
+      "big-image small-images";
+  grid-template-columns: 3fr 2fr; 
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.big_image {
+  grid-area: big-image;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.big_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+.small_image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.small_image img {
+  width: calc(50% - 5px); 
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; 
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.small_image img:hover {
+  transform: scale(1.05); 
+}

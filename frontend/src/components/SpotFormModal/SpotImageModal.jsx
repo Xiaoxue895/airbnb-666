@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showSpotDetails } from "../../store/spot";
 
-// import './SpotImageModal.css'
+import './SpotImageModal.css'
 
 const SpotImage = ({spotId}) => {
     const dispatch = useDispatch();
