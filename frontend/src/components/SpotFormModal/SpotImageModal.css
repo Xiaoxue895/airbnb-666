@@ -1,14 +1,15 @@
 .all_spot_container {
   display: grid;
   grid-template-areas: 
-      "big_image small_image";
+      "bigimage smallimage";
   grid-template-columns: 3fr 2fr; 
   gap: 10px;
   margin: 20px 0;
+  width: 100%; 
 }
 
 .big_image {
-  grid-area: big_image;
+  grid-area: bigimage;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -23,7 +24,7 @@
 }
 
 .small_image {
-  grid-area: small_image;
+  grid-area: smallimage;
   display: grid;
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: repeat(2, 1fr); 
