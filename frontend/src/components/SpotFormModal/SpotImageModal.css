@@ -9,6 +9,7 @@
 }
 
 .big_image {
+  display: grid;
   grid-area: bigimage;
   width: 100%;
   height: 100%;
