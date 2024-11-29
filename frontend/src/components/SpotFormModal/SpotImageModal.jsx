@@ -20,15 +20,15 @@ const SpotImage = ({spotId}) => {
       return <p>No images available for this spot.</p>;
 
 
-    const previewImage = spot.SpotImages.find((image) => image.preview === true);
+    const mainImage = spot.SpotImages.find((image) => image.preview === true);
     const smallImages = spot.SpotImages.filter((image) => image.preview === false && image.url);
 
     return(
         <div className="all_spot_container">
             <div className="big_image">
 
-            {previewImage ? (
-               <img src={previewImage.url} alt={spot.name} />
+            {mainImage ? (
+               <img src={mainImage.url} alt={spot.name} />
             ) : (
                <img
                src="images/WeChatee787054df89daea6e1a58875fb57021.jpg"

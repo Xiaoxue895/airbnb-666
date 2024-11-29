@@ -1,14 +1,14 @@
 .all_spot_container {
   display: grid;
   grid-template-areas: 
-      "big-image small-images";
+      "big_image small_image";
   grid-template-columns: 3fr 2fr; 
   gap: 10px;
   margin: 20px 0;
 }
 
 .big_image {
-  grid-area: big-image;
+  grid-area: big_image;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -23,20 +23,22 @@
 }
 
 .small_image {
-  display: flex;
-  flex-wrap: wrap;
+  grid-area: small_image;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: repeat(2, 1fr); 
   gap: 10px;
 }
 
 .small_image img {
-  width: calc(50% - 5px); 
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
-  object-fit: cover; 
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .small_image img:hover {
-  transform: scale(1.05); 
+  transform: scale(1.1); 
 }
