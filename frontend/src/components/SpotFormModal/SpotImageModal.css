@@ -1,5 +1,5 @@
 .all_spot_container {
-  display: flex;
+  display: inline-flex;
   gap: 10px;
   margin: 20px 0;
   width: 100%; 
