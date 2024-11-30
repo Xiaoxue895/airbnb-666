@@ -53,7 +53,7 @@ const SpotDetail = ()=>{
         <h2 className="spot_title">{spot.name}</h2>
         <p className="spot_location">{spot.city}, {spot.state}, {spot.country}</p>
         
-        <SpotImage spotId={spotId} className="spot_image"/>
+        <SpotImage spotId={spotId} />
 
         <div>
 

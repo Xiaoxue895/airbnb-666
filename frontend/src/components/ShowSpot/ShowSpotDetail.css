@@ -21,12 +21,12 @@
 }
 
 
-.spot_image {
+/* .spot_image {
     max-width: 100%; 
     height: auto; 
     border-radius: 8px;
     object-fit: cover; 
-}
+} */
 
 .spot_detail_description {
     margin: 20px 0;
