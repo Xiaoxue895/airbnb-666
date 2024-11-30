@@ -24,7 +24,7 @@
   border-radius: 8px;
 }
 
-.small_image {
+.small_images {
   grid-area: smallimage;
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -32,7 +32,7 @@
   gap: 10px;
 }
 
-.small_image img {
+.small_images img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -41,6 +41,6 @@
   transition: transform 0.3s ease;
 }
 
-.small_image img:hover {
+.small_images img:hover {
   transform: scale(1.1); 
 }

@@ -37,11 +37,13 @@ const SpotImage = ({spotId}) => {
             )}
             </div>
 
+            <div className="small_images">
             {smallImages.map((image) => (
-                <div className="small_image" key={image.id}>
+                <div key={image.id}>
                     <img src={image.url} alt={image.id} />
                 </div>
             ))}
+            </div>
 
 
         </div>
