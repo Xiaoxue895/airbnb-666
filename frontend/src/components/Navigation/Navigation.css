@@ -1,3 +1,5 @@
+
+
 .profile-dropdown {
     list-style-type: none;
     margin: 0;
@@ -31,10 +33,11 @@
   #logo a {
     text-decoration: none;
     color: #ff385c;
-    font-size: large;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 10px;
   }
   
   .fa-airbnb {
-    font-size: large;
+    font-size: 22px;
   }

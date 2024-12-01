@@ -1,1 +1,127 @@
 
+.spot_detail_continer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+
+  .spot_title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .spot_location {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+
+  .spot_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .spot_detail_description {
+    width: 60%;
+  }
+  
+  .host_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .host_description {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .spot_price_part {
+    width: 35%;
+    text-align: right;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+  }
+  
+  .spot_price_firstline {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 15px; 
+  }
+  
+  .spot_price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff385c;
+  }
+  
+  .spot_rating {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  .booking {
+    margin-top: 20px;
+  }
+  
+  .check_in,
+  .check_out {
+    margin-bottom: 10px;
+  }
+  
+  .booking_input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .reverse_button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff385c;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reverse_button:hover {
+    background-color: #ff385c;
+  }
+
+  
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .spot_info {
+      flex-direction: column;
+    }
+  
+    .spot_detail_description {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .spot_price_part {
+      width: 100%;
+      margin-top: 20px;
+      text-align: left;
+    }
+  
+    .reverse_button {
+      padding: 12px;
+      font-size: 1.2rem;
+    }
+  }
+  
