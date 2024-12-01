@@ -44,7 +44,7 @@ const SpotDetail = ()=>{
     if (!spot.Owner) return <div>Loading owner details...</div>;
 
     const handleReservation = () => {
-        alert("Next class");
+        alert("Feature coming soon");
     }
 
 

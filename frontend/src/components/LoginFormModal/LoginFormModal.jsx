@@ -79,7 +79,6 @@ function LoginFormModal() {
           <p>{errors.password}</p>
         )}
 
-
         <button type="submit" disabled={Object.values(errors).length}>Log In</button>
 
         <button onClick={handleDemoLogin}>Log in as Demo User</button>
