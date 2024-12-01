@@ -24,8 +24,21 @@ h1 {
 
 
 .user_spot_container {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    gap: 20px; */
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
     gap: 20px;
+    padding: 20px;
+    max-width: 100%; 
+    margin: 0 auto;
+    box-sizing: border-box; 
 }
 
+.user_spot_container img {
+    max-width: 100%;
+    height:200px;
+    object-fit: cover; 
+}

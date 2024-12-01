@@ -1,6 +1,6 @@
 // frontend/src/components/SignupFormPage/SignupFormPage.jsx
 
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { useModal } from '../../context/Modal';
 import * as sessionActions from '../../store/session';
@@ -17,12 +17,12 @@ function SignupFormModal() {
   const [errors, setErrors] = useState({});
   const { closeModal } = useModal();
 
-  useEffect(() => {
-    const errs = {};
-    if (username.length < 4) errs.username = " ";
-    if (password.length < 6) errs.password = " ";
-    setErrors(errs);
-  }, [username, password])
+  // useEffect(() => {
+  //   const errs = {};
+  //   if (username.length < 4) errs.username = " ";
+  //   if (password.length < 6) errs.password = " ";
+  //   setErrors(errs);
+  // }, [username, password])
 
   const handleSubmit = (e) => {
     e.preventDefault();

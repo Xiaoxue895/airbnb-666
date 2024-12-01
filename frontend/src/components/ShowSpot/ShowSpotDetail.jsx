@@ -53,9 +53,9 @@ const SpotDetail = ()=>{
         <h2 className="spot_title">{spot.name}</h2>
         <p className="spot_location">{spot.city}, {spot.state}, {spot.country}</p>
         
-        <SpotImage spotId={spotId} />
+        <SpotImage spotId={spotId} className = "spot_image"/>
 
-        <div>
+        <div className="spot_info">
 
             <div className="spot_detail_description">
                 <h2 className="host_title">Hosted by {spot.Owner.firstName} {spot.Owner.lastName}</h2>
@@ -63,15 +63,13 @@ const SpotDetail = ()=>{
             </div>
 
             <div className="spot_price_part">
-                <span id="spot_price">${spot.price}</span><span>night</span>
+                <span className="spot_price">${spot.price}</span><span>night</span>
 
-            </div>
+                <div className="spot_rating">
+                ⭐️ {!averageRating? "New": <>{averageRating} · {reviews?.Reviews?.length} {reviews?.Reviews?.length === 1 ? "Review" : "Reviews"}</>}
+                </div>
 
-            <div className="spot_rating">
-            ⭐️ {!averageRating? "New": <>{averageRating} · {reviews?.Reviews?.length} {reviews?.Reviews?.length === 1 ? "Review" : "Reviews"}</>}
-            </div>
-
-            <div className="booking">
+                <div className="booking">
                     <div className="check_in">
                         <label>CHECK-IN</label>
                         <input type="date" className="booking_input"/>
@@ -81,13 +79,15 @@ const SpotDetail = ()=>{
                         <input type="date" className="booking_input"/>
                     </div>
 
-            </div>
+                </div>
 
-            <button className="reverse_button" onClick={handleReservation}>Reserve</button>
+                <button className="reverse_button" onClick={handleReservation}>Reserve</button>
+
+            </div>
 
         </div>
         
-        <ReviewList spotId={spotId}/>
+        <ReviewList spotId={spotId} className ="spot_review"/>
     </div>
     )
 

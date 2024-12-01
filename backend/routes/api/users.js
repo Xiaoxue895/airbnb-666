@@ -15,7 +15,7 @@ const validateSignup = [
   check('email')
     .exists({ checkFalsy: true })
     .isEmail()
-    .withMessage('Please provide a valid email.'),
+    .withMessage('The provided email is invalid.'),
   check('username')
     .exists({ checkFalsy: true })
     .isLength({ min: 4 })
@@ -39,8 +39,12 @@ router.post(
       
       const { firstName, lastName,email, password, username} = req.body; 
 
+
+
       // console.log(req.body);
       const hashedPassword = bcrypt.hashSync(password);
+    
+
       const user = await User.create({ firstName, lastName,email, hashedPassword, username});
   
       const safeUser = {

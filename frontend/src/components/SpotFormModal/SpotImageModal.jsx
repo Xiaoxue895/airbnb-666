@@ -24,7 +24,7 @@ const SpotImage = ({spotId}) => {
     const smallImages = spot.SpotImages.filter((image) => image.preview === false && image.url);
 
     return(
-        <div className="all_spot_container">
+        <div className="all_image_container">
             <div className="big_image">
 
             {mainImage ? (
@@ -39,7 +39,7 @@ const SpotImage = ({spotId}) => {
 
             <div className="small_images">
             {smallImages.map((image) => (
-                <div key={image.id}>
+                <div key={image.id} className="small_image">
                     <img src={image.url} alt={image.id} />
                 </div>
             ))}
