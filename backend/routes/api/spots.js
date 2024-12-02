@@ -409,41 +409,52 @@ router.post('/:spotId/images',  requireAuth, async (req, res, next) => {
 
 //edit a spot based on spot id
 router.put('/:spotId', requireAuth,validateSpot, async(req, res, next) => {
-  const spotId = req.params.spotId;
+
+  const spot = await Spot.findByPk(req.params.spotId);
+  if (!spot) {
+    return res.status(404).json({
+      message: "Spot couldn't be found",
+    });
+  }
 
   const { user } = req;
-
-  const spot = await Spot.findByPk(spotId);
-
-//  if ( spot && spot.ownerId === user.id ) {
-//   for(let attribute in req.body){
-//       spot[attribute] = req.body[attribute];
-//   }
-
-//   return res.json( spot );
- 
-//  }
-
-//   return res.status(404).json({message: "Spot couldn't be found"});
-// });
-
-if (spot) {
-  if (spot.ownerId === user.id) {
-    for (let attribute in req.body) {
-      spot[attribute] = req.body[attribute];
-    }
-    
-    return res.json(spot);
-  } else {
+  if (spot.ownerId !== user.id) {
     return res.status(403).json({
       message: "Forbidden",
     });
   }
-} else {
-  return res.status(404).json({
-    message: "Spot couldn't be found",
+
+  const { address, city, state, country, lat, lng, name, description, price } =
+    req.body;
+  if (address !== undefined) spot.address = address;
+  if (city !== undefined) spot.city = city;
+  if (state !== undefined) spot.state = state;
+  if (country !== undefined) spot.country = country;
+  if (lat !== undefined) spot.lat = lat;
+  if (lng !== undefined) spot.lng = lng;
+  if (name !== undefined) spot.name = name;
+  if (description !== undefined) spot.description = description;
+  if (price !== undefined) spot.price = price;
+
+  await spot.save({
+    fields: [
+      "address",
+      "city",
+      "state",
+      "country",
+      "lat",
+      "lng",
+      "name",
+      "description",
+      "price",
+      "updatedAt",
+    ],
   });
-}
+  spot.dataValues.createdAt = formatTime(spot.dataValues.createdAt);
+  spot.dataValues.updatedAt = formatTime(spot.dataValues.updatedAt);
+
+  return res.status(200).json(spot);
+
 });
 
 

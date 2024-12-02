@@ -113,7 +113,6 @@ export const showSpotLists = () => async (dispatch) => {
     }
   };
 
-// 1016晚上,这里应该用update还是edit？感觉edit更合理一点
 
   export const updateSpots = (spot) => async (dispatch) => {
     const response = await csrfFetch(`/api/spots/${spot.id}`, {

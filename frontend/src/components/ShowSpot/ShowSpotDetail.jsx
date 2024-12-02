@@ -64,7 +64,7 @@ const SpotDetail = ()=>{
 
             <div className="spot_price_part">
                 <div className="spot_price_firstline">
-                <div className="spot_price">${spot.price}night</div>
+                <div className="spot_price">${spot.price} night</div>
 
                 <div className="spot_rating">
                 ⭐️ {!averageRating? "New": <>{averageRating} · {reviews?.Reviews?.length} {reviews?.Reviews?.length === 1 ? "Review" : "Reviews"}</>}
