@@ -42,3 +42,23 @@ h1 {
     height:200px;
     object-fit: cover; 
 }
+
+@media (max-width: 1200px) {
+    .user_spot_container {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
+}
+
+
+@media (max-width: 900px) {
+    .user_spot_container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+    .user_spot_container {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+}
