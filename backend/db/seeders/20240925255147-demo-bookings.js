@@ -53,16 +53,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-
-    await queryInterface.bulkInsert(
-      'Bookings', 
-      bookingsData.map((booking) => ({
-        ...booking,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      })),
-      {}
-    );
+    await Booking.bulkCreate(bookingsData, { validate: true });
 
   },
 
