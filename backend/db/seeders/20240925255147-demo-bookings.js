@@ -9,34 +9,34 @@ if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
 }
 
-const bookings = [
+const bookingsData = [
   {
     spotId: 2,
-    userId: 3,
+    userId: 1,
     startDate: new Date(Date.UTC(2024, 11, 30)),
     endDate: new Date(Date.UTC(2024, 12, 4))
   },
   {
     spotId: 1,
-    userId: 4,
+    userId: 1,
     startDate: new Date(Date.UTC(2024, 12, 1)),
     endDate: new Date(Date.UTC(2024, 12, 5))
   },
   {
     spotId: 5,
-    userId: 5,
+    userId: 2,
     startDate: new Date(Date.UTC(2024, 12, 15)),
     endDate: new Date(Date.UTC(2024, 12, 25))
   },
   {
     spotId: 3,
-    userId: 1,
+    userId: 2,
     startDate: new Date(Date.UTC(2024, 12, 3)),
     endDate: new Date(Date.UTC(2024, 12, 10))
   },
   {
     spotId: 4,
-    userId: 2,
+    userId: 3,
     startDate: new Date(Date.UTC(2024, 12, 3)),
     endDate: new Date(Date.UTC(2024, 12, 10))
   }
@@ -54,7 +54,15 @@ module.exports = {
      * }], {});
     */
 
-    await Booking.bulkCreate(bookings, { validate: true });
+    await queryInterface.bulkInsert(
+      'Bookings', 
+      bookingsData.map((booking) => ({
+        ...booking,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })),
+      {}
+    );
 
   },
 
