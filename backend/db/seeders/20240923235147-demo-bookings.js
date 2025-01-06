@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
 }
 
-const bookingsData = [
+const bookings= [
   {
     spotId: 2,
     userId: 1,
@@ -53,7 +53,8 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await Booking.bulkCreate(bookingsData, { validate: true });
+   
+    await Booking.bulkCreate(bookings, { validate: true });
 
   },
 
@@ -64,9 +65,9 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    options.tableName = "bookings";
+    options.tableName = "Bookings";
     return queryInterface.bulkDelete(options, {
-      userId: bookingsData.map( Bookings => Bookings.userId)
+      userId: bookings.map( Bookings => Bookings.userId)
     }, {});
   }
 };
