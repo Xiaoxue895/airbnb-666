@@ -75,7 +75,7 @@ module.exports = {
      */
     options.tableName = "Bookings";
     return queryInterface.bulkDelete(options, {
-      userId: bookings.map( Bookings => Bookings.userId)
+      userId: bookingsData.map( Bookings => Bookings.userId)
     }, {});
   }
 };
