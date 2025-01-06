@@ -64,7 +64,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    options.tableName = "Bookings";
+    options.tableName = "bookings";
     return queryInterface.bulkDelete(options, {
       userId: bookingsData.map( Bookings => Bookings.userId)
     }, {});
