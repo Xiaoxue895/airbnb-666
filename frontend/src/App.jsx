@@ -15,7 +15,8 @@ import ManageSpot from './components/SpotFormModal/ManageSpot';
 import CreateSpot from './components/SpotFormModal/CreateSpot';
 import UpdateSpot from './components/SpotFormModal/UpdateSpot';
 
-import ManageReview from './components/ReviewFormModal/ManageReview'
+import ManageReview from './components/ReviewFormModal/ManageReview';
+import Footer from './components/Footer/Footer'
 
 
 
@@ -36,6 +37,7 @@ function Layout() {
     <>
       <Navigation isLoaded={isLoaded} />
       {isLoaded && <Outlet />}
+      <Footer />
     </>
   );
 }

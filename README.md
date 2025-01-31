@@ -1,4 +1,16 @@
-# CCAirBnB
+# CCAirBnB by Alice
+
+CCAirbnb is my first full-stack web application, built with Express for the backend and React for the frontend. Users can manage spots and reviews, and the application also performs user review statistics. Overall, this is the MVP version of an Airbnb-like website.
+
+# Screenshots
+![Screenshot 1](frontend/public/images/screenshot1.png)
+
+![Screenshot 2](frontend/public/images/screenshot2.jpg)
+
+![Screenshot 3](frontend/public/images/screenshot3.jpg)
+
+![Screenshot 4](frontend/public/images/screenshot4.jpg)
+
 
 ## Database Schema Design
 
